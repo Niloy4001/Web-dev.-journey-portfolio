@@ -307,7 +307,7 @@ main{
 /* Next-Target section ********************************************************** */
 .next-target{
     max-width: 1140px;
-    height: 1040px;
+    height: 785px;
     margin: 10% auto;
     display: flex;
     flex-direction: column;
@@ -360,6 +360,7 @@ main{
 @media screen and (max-width:576px){
     .next-target{
         margin-top: 30%;
+        height: auto;
     }
     .next-target .next-target-content-container{
         flex-direction: column;
@@ -383,10 +384,10 @@ main{
 }
 /* Feed-back section ********************************************************** */
 .feedback{
-    width: 1140px;
+    max-width: 1140px;
     height: 313px;
-    margin: 70px auto;
-    padding: 64px 48px;
+    margin: 5% auto;
+    padding: 5% 3%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -396,8 +397,10 @@ main{
     border-radius: 16px;
   }
 .feedback .feedback-container{
-    width: 1044px;
-    height: 185px;
+    /* max-width: 1044px;
+    height: auto; */
+    width: 100%;
+    height: auto;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -407,31 +410,34 @@ main{
 .feedback-container h1{
     color: rgb(255, 255, 255);
     font-family: Azeret Mono;
-    font-size: 32px;
+    font-size: 2em;
     font-weight: 700;
 }
 .feedback-container p{
     color: rgb(255, 255, 255);
     font-family: Azeret Mono;
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 400;
     opacity: 0.7;
 }
 .feedback-input-btn-container{
-    width: 700px;
-    height: 60px;
+    width: 100%;
+    height: 100%;
 }
 .feedback-input-btn-container input{
     padding: 19px 20px 19px 20px;
     border: 1px solid rgba(13, 19, 33, 0.15);
     border-radius: 8px;
     background: rgb(255, 255, 255);
-    color: rgba(13, 19, 33, 0.4);
+    color:black;
     font-family: Azeret Mono;
     font-size: 16px;
     font-weight: 400;
-    width: 70%;
+    width: 40%;
     height: 22px;
+}
+input:focus{
+    outline: none;
 }
 .feedback-input-btn-container button{
     padding: 17px 20px 17px 20px;
@@ -442,10 +448,24 @@ main{
     font-family: Azeret Mono;
     font-size: 20px;
     font-weight: 600;
-    width: 22%;
+    width: 16%;
     height: 65px;
     cursor: pointer;
 
+}
+@media screen and (max-width:576px){
+    .feedback{
+        margin-top: 30%;
+    } 
+    .feedback-input-btn-container input{
+        width: calc( 100% - 40px );
+    }  
+    .feedback-input-btn-container button{
+        width: 30%;
+        padding: 0;
+        height: 50px;
+        margin-top: 2%;
+    }
 }
 /* Footer section ********************************************************** */
 footer{
